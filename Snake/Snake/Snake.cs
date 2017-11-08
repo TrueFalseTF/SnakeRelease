@@ -42,6 +42,11 @@ namespace Snake
             return nextPoint;
         }
 
+        internal void Teleportation()
+        {
+            
+        }
+
         public void HendleKey (ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow)

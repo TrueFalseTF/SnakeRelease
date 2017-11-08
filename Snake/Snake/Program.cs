@@ -26,9 +26,13 @@ namespace Snake
 
             while(true)
             {
-                if(walls.IsHit(snake) || snake.IsHitTail())
+                if(snake.IsHitTail())
                 {
                     break;
+                }
+                if (walls.IsHit(snake))
+                {
+                    snake.Teleportation();
                 }
                 if(snake.Eat(food))
                 {
