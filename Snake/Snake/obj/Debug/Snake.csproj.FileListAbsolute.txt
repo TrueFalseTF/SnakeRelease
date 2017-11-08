@@ -1,0 +1,7 @@
+E:\Портфель ученика\snakeTF\Snake\Snake\bin\Debug\Snake.exe.config
+E:\Портфель ученика\snakeTF\Snake\Snake\bin\Debug\Snake.exe
+E:\Портфель ученика\snakeTF\Snake\Snake\bin\Debug\Snake.pdb
+E:\Портфель ученика\snakeTF\Snake\Snake\obj\Debug\Snake.csprojResolveAssemblyReference.cache
+E:\Портфель ученика\snakeTF\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+E:\Портфель ученика\snakeTF\Snake\Snake\obj\Debug\Snake.exe
+E:\Портфель ученика\snakeTF\Snake\Snake\obj\Debug\Snake.pdb
