@@ -30,18 +30,26 @@ namespace Snake
                 {
                     break;
                 }
-                if (walls.IsHit(snake))
-                {
-                    snake.Teleportation();
-                }
-                if(snake.Eat(food))
+                
+                if(snake.Eat(food, -76, -23))
                 {
                     food = foodCreator.CreateFood();
                     food.Draw();
                 }
+
+                if (snake.Eat(food, 1, 1))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+
+                if (walls.IsHit(snake))
+                {
+                    snake.Move(-76, -23);
+                }
                 else
                 {
-                    snake.Move();
+                    snake.Move(1,1);
                 }
 
                 Thread.Sleep(100);

@@ -31,23 +31,23 @@ namespace Snake
             sym = p.sym;
         }
 
-        public void Move(int offset, Direktion direktion)
+        public void Move(int offsetHorizontal, int offsetVertical, Direktion direktion)
         {
             if(direktion == Direktion.LEFT)
             {
-                x = x - offset;
+                x = x - offsetHorizontal;
             }
             else if (direktion == Direktion.RIGHT)
             {
-                x = x + offset;
+                x = x + offsetHorizontal;
             }
             else if (direktion == Direktion.TOP)
             {
-                y = y - offset;
+                y = y - offsetVertical;
             }
             else if (direktion == Direktion.BOTTOM)
             {
-                y = y + offset;
+                y = y + offsetVertical;
             }                   
         }
         
