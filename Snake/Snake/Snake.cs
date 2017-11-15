@@ -44,20 +44,20 @@ namespace Snake
         }
               
         public void HendleKey (ConsoleKey key)
-        {
-            if (key == ConsoleKey.LeftArrow)
+        {            
+            if (key == ConsoleKey.LeftArrow && direktion != Direktion.RIGHT)
             {
                 direktion = Direktion.LEFT; //Чтобы присвоить значение переменной внутри объекта, необходимо дать ссылку на этот объект.
             }
-            else if (key == ConsoleKey.RightArrow)
+            else if (key == ConsoleKey.RightArrow && direktion != Direktion.LEFT)
             {
                 direktion = Direktion.RIGHT;
             }
-            else if (key == ConsoleKey.UpArrow)
+            else if (key == ConsoleKey.UpArrow && direktion != Direktion.BOTTOM)
             {
                 direktion = Direktion.TOP;
             }
-            else if (key == ConsoleKey.DownArrow)
+            else if (key == ConsoleKey.DownArrow && direktion != Direktion.TOP)
             {
                 direktion = Direktion.BOTTOM;
             }

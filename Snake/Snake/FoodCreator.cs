@@ -12,7 +12,7 @@ namespace Snake
         private int mapHeight;
         private char sym;//Поля класса с локальной доступностью
 
-        Random random = new Random();
+        
 
         public FoodCreator(int mapWidht, int mapHeight, char sym)
         {
@@ -21,11 +21,21 @@ namespace Snake
             this.sym = sym;
         }
 
-        public Point CreateFood()
+        
+
+        public Point CreateFood(Figure snake)
         {
-            int x = random.Next(2, mapWidht - 2);
-            int y = random.Next(2, mapHeight - 2);
-            return new Point(x, y, sym);
+            Point p = new Point(0, 0, sym);
+            do
+            {
+                Random random = new Random();
+                p.x = random.Next(2, mapWidht - 2);
+                p.y = random.Next(2, mapHeight - 2);
+
+                
+            } while (snake.IsHit(p));
+
+            return p;
         }
     }
 }
