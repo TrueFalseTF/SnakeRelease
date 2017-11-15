@@ -30,11 +30,11 @@ namespace Snake
             return false;
         }
 
-        internal bool IsHitSnake(Figure snake)
+        internal bool IsHitWalls(Figure snake)
         {
             foreach (var p in pList)
             {
-                if (snake.IsHitSnake(p))
+                if (snake.IsHitWalls(p))
                 {
                     return true;
                 }
@@ -54,7 +54,7 @@ namespace Snake
             return false;
         }
 
-        internal bool IsHitSnake(Point point)
+        internal bool IsHitWalls(Point point)
         {
             Point head = pList.Last();
             if (head.IsHit(point))

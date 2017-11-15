@@ -29,7 +29,7 @@ namespace Snake
         {
             foreach (var wall in wallList)
             {
-                if (wall.IsHitSnake(snake))
+                if (wall.IsHitWalls(snake))
                 {
                     return true;
                 }

@@ -46,6 +46,7 @@ namespace Snake
                 if (walls.IsHit(snake))
                 {
                     snake.Move(-76, -23);
+                    walls.Draw();
                 }
                 else
                 {
