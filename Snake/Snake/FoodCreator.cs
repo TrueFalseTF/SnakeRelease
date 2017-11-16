@@ -10,7 +10,7 @@ namespace Snake
     {
         private int mapWidht;
         private int mapHeight;
-        private char sym;//Поля класса с локальной доступностью
+        private char sym;
 
         
 

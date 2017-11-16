@@ -10,7 +10,7 @@ namespace Snake
     {
         public int x;
         public int y;
-        public char sym;//Поля класса c глобальной доступностью
+        public char sym;
 
         public Point()
         {
@@ -68,7 +68,7 @@ namespace Snake
             return p.x == this.x && p.y == this.y;
         }
 
-        public override string ToString()//меняет значение имени объекта
+        public override string ToString()
         {
             return x + "," + y + "," + sym;
         }

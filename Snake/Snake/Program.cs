@@ -17,7 +17,7 @@ namespace Snake
             walls.Draw();
                         
             Point p = new Point(1, 5, '*');
-            Snake snake = new Snake(p, 5, Direktion.RIGHT);
+            Snake snake = new Snake(p, 20, Direktion.RIGHT);
             snake.Drow();
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
@@ -39,7 +39,7 @@ namespace Snake
                     break;
                 }
                 
-                if(snake.Eat(food, -76, -23))
+                if(snake.Eat(food, -77, -23))
                 {
                     food = foodCreator.CreateFood(snake);
                     food.Draw();
@@ -53,7 +53,7 @@ namespace Snake
 
                 if (walls.IsHit(snake))
                 {
-                    snake.Move(-76, -23);
+                    snake.Move(-77, -23);
                     walls.Draw();
                 }
                 else

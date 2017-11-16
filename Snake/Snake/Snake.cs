@@ -47,7 +47,7 @@ namespace Snake
         {            
             if (key == ConsoleKey.LeftArrow && direktion != Direktion.RIGHT)
             {
-                direktion = Direktion.LEFT; //Чтобы присвоить значение переменной внутри объекта, необходимо дать ссылку на этот объект.
+                direktion = Direktion.LEFT; 
             }
             else if (key == ConsoleKey.RightArrow && direktion != Direktion.LEFT)
             {
