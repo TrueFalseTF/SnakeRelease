@@ -8,6 +8,7 @@ namespace Snake
 {
     class Snake : Figure
     {
+        
         Direktion direktion;
 
         public Snake (Point tail, int length, Direktion _direktion)
@@ -17,55 +18,55 @@ namespace Snake
             for(int i = 0; i < length; i++)
             {
                 Point p = new Point(tail);
-                p.Move(i, direktion);
+                p.Move(i, i, direktion);
                 pList.Add(p);
             }
 
         }
 
-        internal void Move()
+        internal void Move( int offsetHorizontal, int offsetVertical)
         {
             Point tail = pList.First();
             pList.Remove(tail);
-            Point head = GetNextPoint();
+            Point head = GetNextPoint(offsetHorizontal, offsetVertical);
             pList.Add(head);
 
             tail.Clear();
             head.Draw();
         }
-
-        public Point GetNextPoint()
+                
+        public Point GetNextPoint( int offsetHorizontal, int offsetVertical)
         {
             Point head = pList.Last();
             Point nextPoint = new Point(head);
-            nextPoint.Move(1, direktion);
+            nextPoint.Move(offsetHorizontal, offsetVertical, direktion);
             return nextPoint;
         }
-
+              
         public void HendleKey (ConsoleKey key)
-        {
-            if (key == ConsoleKey.LeftArrow)
+        {            
+            if (key == ConsoleKey.LeftArrow && direktion != Direktion.RIGHT)
             {
-                direktion = Direktion.LEFT; //Чтобы присвоить значение переменной внутри объекта, необходимо дать ссылку на этот объект.
+                direktion = Direktion.LEFT; 
             }
-            else if (key == ConsoleKey.RightArrow)
+            else if (key == ConsoleKey.RightArrow && direktion != Direktion.LEFT)
             {
                 direktion = Direktion.RIGHT;
             }
-            else if (key == ConsoleKey.UpArrow)
+            else if (key == ConsoleKey.UpArrow && direktion != Direktion.BOTTOM)
             {
                 direktion = Direktion.TOP;
             }
-            else if (key == ConsoleKey.DownArrow)
+            else if (key == ConsoleKey.DownArrow && direktion != Direktion.TOP)
             {
                 direktion = Direktion.BOTTOM;
             }
 
         }
 
-        internal bool Eat(Point food)
+        internal bool Eat(Point food, int offsetHorizontal, int offsetVertical)
         {
-            Point head = GetNextPoint();
+            Point head = GetNextPoint(offsetHorizontal, offsetVertical);
             if (head.IsHit(food))
             //if(head.x == food.x && head.y == food.y)
             {
@@ -79,7 +80,7 @@ namespace Snake
             }
            
         }
-
+                
         public bool IsHitTail()
         {
             var head = pList.Last();

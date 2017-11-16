@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Snake
 {
-    class Walls
+    class Walls 
     {
         List<Figure> wallList;
 
@@ -25,18 +25,18 @@ namespace Snake
             wallList.Add(vLineRight);
         }
 
-        internal bool IsHit(Figure figure)
+        internal bool IsHit(Figure snake)
         {
             foreach (var wall in wallList)
             {
-                if (wall.IsHit(figure))
+                if (wall.IsHitWalls(snake))
                 {
                     return true;
                 }
             }
             return false;
         }
-
+              
         public void Draw()
         {
             foreach(var walls in wallList)
