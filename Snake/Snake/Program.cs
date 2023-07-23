@@ -11,8 +11,9 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80, 25);
-                        
+            
             Walls walls = new Walls(80, 25);
             walls.Draw();
                         

@@ -12,3 +12,11 @@ E:\Портфель ученика\SnakeRelease\Snake\Snake\obj\Debug\Snake.cspr
 E:\Портфель ученика\SnakeRelease\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
 E:\Портфель ученика\SnakeRelease\Snake\Snake\obj\Debug\Snake.exe
 E:\Портфель ученика\SnakeRelease\Snake\Snake\obj\Debug\Snake.pdb
+I:\repositories\SnakeRelease\Snake\Snake\bin\Debug\Snake.exe.config
+I:\repositories\SnakeRelease\Snake\Snake\bin\Debug\Snake.exe
+I:\repositories\SnakeRelease\Snake\Snake\bin\Debug\Snake.pdb
+I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.csproj.AssemblyReference.cache
+I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.csproj.SuggestedBindingRedirects.cache
+I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.exe
+I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.pdb
