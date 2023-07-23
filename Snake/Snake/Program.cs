@@ -95,7 +95,7 @@ namespace Snake
 
         static void CheckAndResetWindowSize(int mapWight, int mapHeight)
         {
-            if (Console.WindowWidth != mapWight || Console.WindowHeight != mapHeight)
+            if (Console.WindowWidth <= mapWight || Console.WindowHeight <= mapHeight)
             {
                 Console.SetWindowSize(mapWight, mapHeight);
             }
