@@ -9,13 +9,17 @@ namespace Snake
 {
     class Program
     {
-        //тест
+        //тест 
         static void Main(string[] args)
         {
-            Console.SetWindowSize(80, 25);
-            Console.SetBufferSize(80, 25);
+
+            int mapWight = 80;
+            int mapHeight = 25;
+
+            Console.SetWindowSize(mapWight, mapHeight);
+            Console.SetBufferSize(mapWight, mapHeight);
             
-            Walls walls = new Walls(80, 25);
+            Walls walls = new Walls(mapWight, mapHeight);
             walls.Draw();
                         
             Point p = new Point(1, 5, '*');
@@ -28,6 +32,8 @@ namespace Snake
 
             while(true)
             {
+                CheckAndResetWindowSize(mapWight, mapHeight);
+
                 Thread.Sleep(100);
 
                 if (Console.KeyAvailable && walls.IsHit(snake) == false)
@@ -86,6 +92,13 @@ namespace Snake
             Console.SetCursorPosition(xOffset, yOffset);
             Console.WriteLine(text);
         }
-    }
 
+        static void CheckAndResetWindowSize(int mapWight, int mapHeight)
+        {
+            if (Console.WindowWidth != mapWight || Console.WindowHeight != mapHeight)
+            {
+                Console.SetWindowSize(mapWight, mapHeight);
+            }
+        }
+    }
 }

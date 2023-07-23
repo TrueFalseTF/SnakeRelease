@@ -20,3 +20,11 @@ I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.csproj.SuggestedBinding
 I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
 I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.exe
 I:\repositories\SnakeRelease\Snake\Snake\obj\Debug\Snake.pdb
+I:\repositories\Snake\Snake\Snake\bin\Debug\Snake.exe.config
+I:\repositories\Snake\Snake\Snake\bin\Debug\Snake.exe
+I:\repositories\Snake\Snake\Snake\bin\Debug\Snake.pdb
+I:\repositories\Snake\Snake\Snake\obj\Debug\Snake.csproj.AssemblyReference.cache
+I:\repositories\Snake\Snake\Snake\obj\Debug\Snake.csproj.SuggestedBindingRedirects.cache
+I:\repositories\Snake\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+I:\repositories\Snake\Snake\Snake\obj\Debug\Snake.exe
+I:\repositories\Snake\Snake\Snake\obj\Debug\Snake.pdb
