@@ -9,6 +9,7 @@ namespace Snake
 {
     class Program
     {
+        //тест
         static void Main(string[] args)
         {
             Console.SetWindowSize(80, 25);
