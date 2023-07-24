@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 namespace Snake
 {
     class Program
-    {
-        //тест 
+    {        
         static void Main(string[] args)
         {
 
+            string s = "5";
             int mapWight = 80;
             int mapHeight = 25;
 
