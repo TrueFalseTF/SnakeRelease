@@ -1,0 +1,7 @@
+**/.git
+**/.vs
+**Snake.csproj
+**App.config
+**/Properties
+**/obj
+**/bin
