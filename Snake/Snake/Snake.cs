@@ -18,7 +18,7 @@ namespace Snake
             for(int i = 0; i < length; i++)
             {
                 Point p = new Point(tail);
-                p.Move(i, i, direktion);
+                p.offsetCoordinate(i, i, direktion);
                 pList.Add(p);
             }
 
@@ -39,7 +39,7 @@ namespace Snake
         {
             Point head = pList.Last();
             Point nextPoint = new Point(head);
-            nextPoint.Move(offsetHorizontal, offsetVertical, direktion);
+            nextPoint.offsetCoordinate(offsetHorizontal, offsetVertical, direktion);
             return nextPoint;
         }
               

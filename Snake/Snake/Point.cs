@@ -26,7 +26,7 @@ namespace Snake
             sym = p.sym;
         }
 
-        public void Move(int offsetHorizontal, int offsetVertical, Direktion direktion)
+        public void offsetCoordinate(int offsetHorizontal, int offsetVertical, Direktion direktion)
         {
             if(direktion == Direktion.LEFT)
             {
