@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Snake
 {
@@ -11,28 +12,28 @@ namespace Snake
     {        
         static void Main(string[] args)
         {
-
-            string s = "5";
+                        
             int mapWight = 80;
             int mapHeight = 25;
 
             Console.SetWindowSize(mapWight, mapHeight);
             Console.SetBufferSize(mapWight, mapHeight);
-            
+
             Walls walls = new Walls(mapWight, mapHeight);
-            walls.Draw();
-                        
+
+
             Point p = new Point(1, 5, '*');
             Snake snake = new Snake(p, 20, Direktion.RIGHT);
-            snake.Drow();
 
             FoodCreator foodCreator = new FoodCreator(80, 25, '$');
             Point food = foodCreator.CreateFood(snake);
-            food.Draw();
 
-            while(true)
+            startDraw(walls, snake, food);
+
+
+            while (true)
             {
-                CheckAndResetWindowSize(mapWight, mapHeight);
+                CheckAndResetWindowSize(mapWight, mapHeight, walls, snake, food);// не работатет
 
                 Thread.Sleep(100);
 
@@ -93,12 +94,29 @@ namespace Snake
             Console.WriteLine(text);
         }
 
-        static void CheckAndResetWindowSize(int mapWight, int mapHeight)
+        static void CheckAndResetWindowSize(int mapWight, 
+                                            int mapHeight, 
+                                            Walls walls, 
+                                            Snake snake,
+                                            Point food)
         {
-            if (Console.WindowWidth <= mapWight || Console.WindowHeight <= mapHeight)
+            if (Console.WindowWidth < mapWight || Console.WindowHeight < mapHeight)
             {
                 Console.SetWindowSize(mapWight, mapHeight);
+                startDraw(walls, snake, food);// не работает
             }
+            
+        }
+
+        static void startDraw(Walls walls, Snake snake, Point food)
+        {
+
+            walls.Draw();
+
+            snake.Drow();
+
+            food.Draw();
+
         }
     }
 }
